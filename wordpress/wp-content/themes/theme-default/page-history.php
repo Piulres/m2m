@@ -16,7 +16,7 @@
 					<!-- Display the Title as a link to the Post's permalink. -->
 					<div class="content">
 
-						<h2>
+						<h2 class="title">
 							<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 								<?php the_title();?>
 							</a>
@@ -38,72 +38,78 @@
 					<p><?php _e( 'Sorry, strange things happen.' ); ?></p>
 
 					<!-- REALLY stop The Loop. -->
+				
 				<?php endif; ?>
 
 			</div>
 
 			<div class="col-md-12 col-xs-12">
 
-				<?php	
+				<div class="isotope-grid">
+	
+					<div class="grid">
 
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array(
-						'posts_per_page' => 10, 
-						'paged' => $paged 
-				);
-				query_posts($args); 
+						<?php	
 
-				?>			
+						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+						$args = array(
+								'posts_per_page' => 10, 
+								'paged' => $paged 
+						);
+						query_posts($args); 
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					
-					<div class="post" <?php post_class( 'class-name' ); ?>>
+						?>
 
-						<div class="col-md-2 col-xs-12">
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							
+							<div class="post col-md-4 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
 
-							<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle')); ?>
+								<div class="col-md-4 col-xs-12">
 
-						</div>
+									<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle')); ?>
 
-						<div class="col-md-10 col-xs-12">
+								</div>
 
-							<h3>
-								<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-									<?php the_title();?>
-								</a>
-							</h3>
+								<div class="col-md-8 col-xs-12">
 
-							<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-							<small>
-								<?php the_date('F j, Y'); ?> at <?php the_time('G:i'); ?> by <?php the_author(); ?>
-							</small>
+									<h3>
+										<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+											<?php the_title();?>
+										</a>
+									</h3>
 
-							<!-- Display a comma separated list of the Post's Categories. -->
-							<p class="postmetadata">
-								<?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?>
-							</p>
+									<small>
+										<?php the_date('F j, Y'); ?> at <?php the_time('G:i'); ?> by <?php the_author(); ?>
+									</small>
 
-							<!-- Display the Post's content in a div box. -->
-							<div class="entry">
-								<!-- <?php the_content(); ?> -->							
-								<?php the_excerpt(); ?>
-							</div>
+									<p class="postmetadata">
+										<?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?>
+									</p>
 
-						</div>	
+									<div class="entry">
+										<?php the_excerpt(); ?>
+									</div>
 
-					</div> <!-- closes the first div box -->		
-					
-				<?php endwhile; ?>
+								</div>
 
-					<!-- pagination -->
-					<p><?php previous_posts_link('Previous >'); ?></p>
-					<p><?php next_posts_link('< Next '); ?></p>
+							</div> <!-- closes the first div box -->			
 
-				<?php else : ?>
+						<?php endwhile; else : ?>	
 
-					<p><?php _e( 'Sorry, strange things happen.' ); ?></p>
+							<p><?php _e( 'Sorry, strange things happen.' ); ?></p>
 
-				<?php endif; ?>				
+						<?php endif; ?>
+
+					</div>
+
+				</div>			
+
+			</div>
+
+			<div class="pagination">
+
+				<p class="left"><?php previous_posts_link('<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous'); ?></p>
+				<p class="right"><?php next_posts_link('Next <i class="fa fa-arrow-right" aria-hidden="true"></i>'); ?></p>
 
 			</div>
 

@@ -8,4 +8,6 @@
 
 <link href='<?php echo get_bloginfo('template_directory');?>/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
+<link href='<?php echo get_bloginfo('template_directory');?>/css/custom.css' rel='stylesheet' type='text/css'>
+
 <link href='<?php echo get_bloginfo('template_directory');?>/style.css' rel='stylesheet' type='text/css'>

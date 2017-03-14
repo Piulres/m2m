@@ -14,7 +14,7 @@
 
 					<div class="content">
 
-						<h2>
+						<h2 class="title">
 							<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 								<?php the_title();?>
 							</a>
@@ -36,55 +36,73 @@
 
 			<div class="col-md-12 col-xs-12">
 
-				<?php  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array(
-						'posts_per_page' => 3, 
-						'paged' => $paged,
-						'category_name' =>  'on-the-field',
-						'order' => DESC
-				);
-				query_posts($args); ?>				
+				<div class="isotope-grid">
+	
+					<div class="grid">
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					
-					<div class="post" <?php post_class( 'class-name' ); ?>>
+						<?php	
 
-						<div class="col-md-2 col-xs-12">
+						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+						$args = array(
+								'posts_per_page' => 6, 
+								'paged' => $paged,
+								'category_name' =>  'on-the-field',
+								'order' => DESC
+						);
+						query_posts($args); 
 
-							<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle')); ?>
+						?>
 
-						</div>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							
+							<div class="post col-md-6 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
 
-						<div class="col-md-10 col-xs-12">
+								<div class="col-md-4 col-xs-12">
 
-							<h3>
-								<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-									<?php the_title();?>
-								</a>
-							</h3>
+									<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle')); ?>
 
-							<small>
-								<?php the_date('F j, Y'); ?> at <?php the_time('G:i'); ?> by <?php the_author(); ?>
-							</small>
+								</div>
 
-							<div class="entry">							
-								<?php the_excerpt(); ?>
-							</div>
+								<div class="col-md-8 col-xs-12">
 
-						</div>	
+									<h3>
+										<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+											<?php the_title();?>
+										</a>
+									</h3>
 
-					</div>		
-					
-				<?php endwhile; ?>
+									<small>
+										<?php the_date('F j, Y'); ?> at <?php the_time('G:i'); ?> by <?php the_author(); ?>
+									</small>
 
-					<p><?php previous_posts_link('Previous >'); ?></p>
-					<p><?php next_posts_link('< Next '); ?></p>
+									<p class="postmetadata">
+										<?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?>
+									</p>
 
-				<?php else : ?>
+									<div class="entry">
+										<?php the_excerpt(); ?>
+									</div>
 
-					<p><?php _e( 'Sorry, strange things happen.' ); ?></p>
+								</div>
 
-				<?php endif; ?>					
+							</div> <!-- closes the first div box -->			
+
+						<?php endwhile; else : ?>	
+
+							<p><?php _e( 'Sorry, strange things happen.' ); ?></p>
+
+						<?php endif; ?>
+
+					</div>
+
+				</div>			
+
+			</div>
+
+			<div class="pagination">
+
+				<p class="left"><?php previous_posts_link('<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous'); ?></p>
+				<p class="right"><?php next_posts_link('Next <i class="fa fa-arrow-right" aria-hidden="true"></i>'); ?></p>
 
 			</div>
 

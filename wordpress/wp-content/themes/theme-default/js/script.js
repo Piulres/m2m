@@ -1,3 +1,69 @@
 $( document ).ready(function() {
-	
+	$('.isotope-grid').isotope({
+	  itemSelector: '.isotope-grid-item',
+	  masonry: {
+	    isFitWidth: true
+	  }
+	});
+
+	// init Isotope
+	var $grid = $('.isotope-grid').isotope({
+	  itemSelector: '.isotope-grid-item'
+	});
+
+	// store filter for each group
+	var filters = {};
+
+	$('.filters').on( 'click', '.button', function() {
+	  var $this = $(this);
+	  // get group key
+	  var $buttonGroup = $this.parents('.button-group');
+	  var filterGroup = $buttonGroup.attr('data-filter-group');
+	  // set filter for group
+	  filters[ filterGroup ] = $this.attr('data-filter');
+	  // combine filters
+	  var filterValue = concatValues( filters );
+	  // set filter for Isotope
+	  $grid.isotope({ filter: filterValue });
+	});
+
+	// change is-checked class on buttons
+	$('.button-group').each( function( i, buttonGroup ) {
+	  var $buttonGroup = $( buttonGroup );
+	  $buttonGroup.on( 'click', 'button', function() {
+	    $buttonGroup.find('.is-checked').removeClass('is-checked');
+	    $( this ).addClass('is-checked');
+	  });
+	});
+	  
+	// flatten object by concatting values
+	function concatValues( obj ) {
+	  var value = '';
+	  for ( var prop in obj ) {
+	    value += obj[ prop ];
+	  }
+	  return value;
+	}
+
+	window.sr = ScrollReveal({ duration: 2000 });
+	// sr.reveal('nav', { opacity: 0 });
+	sr.reveal('h1.center', { delay: 50, easing: 'ease-in-out' });
+	sr.reveal('.history-posts h2', { delay: 50, easing: 'ease-in-out' });
+	sr.reveal('h2.welcome', { delay: 50, easing: 'ease-in-out' });
+	sr.reveal('#searchform', { delay: 50, easing: 'ease-in-out' });
+	sr.reveal('.post', 1000 );
+
+	$(".scrolltop").click(function() {
+	  $("html, body").animate({ scrollTop: 0 }, "slow");
+	  return false;
+	});
+
+	$(function() {
+		$("body").prognroll({
+			height:10,        //Progress bar height
+			color:"#df691a", //Progress bar background color
+			custom:false     //If you make it true, you can add your custom div and see it's scroll progress on the page    
+		});
+	});
+
 });

@@ -1,4 +1,7 @@
+		<a class="scrolltop pulse"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+		
 		<footer>
+
 
 			<?php wp_footer(); ?>
 
