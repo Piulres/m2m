@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html <?php language_attributes(); ?>>
+
+<head>
+
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Merlim CoreBook - Knowledge Shire">
+
+	<meta name="author" content="Piulres">
+
+	<link rel="icon" href="../favicon.ico">
+
+	<title>Merlim CoreBook</title>
+
+	<!-- wp_head -->
+
+	<?php wp_head(); ?>
+
+	<?php include 'le_styles.php' ?>
+
+	<?php include 'le_scripts.php' ?>
+
+</head>
+
+<body <?php body_class(); ?>>
+
+	<nav class="navbar navbar-inverse">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Mobile navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a>
+			</div>			
+				
+			<?php
+	            wp_nav_menu( array(
+	                'menu'              => 'menu_top',
+	                'theme_location'    => 'primary',
+	                'depth'             => 2,
+	                'container'         => 'div',
+	                'container_class'   => 'collapse navbar-collapse',
+	        		'container_id'      => 'bs-example-navbar-collapse-1',
+	                'menu_class'        => 'nav navbar-nav',
+	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+	                'walker'            => new wp_bootstrap_navwalker())
+	            );
+	        ?>			
+
+		</div><!-- /.container-fluid -->
+
+	</nav>
