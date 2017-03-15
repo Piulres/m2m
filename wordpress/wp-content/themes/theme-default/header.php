@@ -26,6 +26,17 @@
 
 	<?php include 'le_scripts.php' ?>
 
+	<script type="text/javascript">
+		
+		function resizeText(multiplier) {
+		  if (document.body.style.fontSize == "") {
+		    document.body.style.fontSize = "1.0em";
+		  }
+		  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
+		}
+
+	</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -56,8 +67,13 @@
 	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 	                'walker'            => new wp_bootstrap_navwalker())
 	            );
-	        ?>			
+	        ?>
+
+	        <div class="plustext trick" onclick="resizeText(1)"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>
+
+			<div class="minustext trick" onclick="resizeText(-1)"><i class="fa fa-minus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>			
 
 		</div><!-- /.container-fluid -->
 
 	</nav>
+

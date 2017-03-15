@@ -47,6 +47,7 @@ $( document ).ready(function() {
 
 	window.sr = ScrollReveal({ duration: 2000 });
 	// sr.reveal('nav', { opacity: 0 });
+	sr.reveal('.trick', { delay: 50, easing: 'ease-in-out' });
 	sr.reveal('h1.center', { delay: 50, easing: 'ease-in-out' });
 	sr.reveal('.history-posts h2', { delay: 50, easing: 'ease-in-out' });
 	sr.reveal('h2.welcome', { delay: 50, easing: 'ease-in-out' });
@@ -64,6 +65,6 @@ $( document ).ready(function() {
 			color:"#df691a", //Progress bar background color
 			custom:false     //If you make it true, you can add your custom div and see it's scroll progress on the page    
 		});
-	});
+	});	
 
 });
