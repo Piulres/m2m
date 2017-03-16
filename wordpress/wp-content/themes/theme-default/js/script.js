@@ -48,10 +48,7 @@ $( document ).ready(function() {
 	window.sr = ScrollReveal({ duration: 2000 });
 	// sr.reveal('nav', { opacity: 0 });
 	sr.reveal('.trick', { delay: 50, easing: 'ease-in-out' });
-	sr.reveal('h1.center', { delay: 50, easing: 'ease-in-out' });
-	sr.reveal('.history-posts h2', { delay: 50, easing: 'ease-in-out' });
-	sr.reveal('h2.welcome', { delay: 50, easing: 'ease-in-out' });
-	sr.reveal('#searchform', { delay: 50, easing: 'ease-in-out' });
+	sr.reveal('.post-trick', 300 );
 	sr.reveal('.post', 1000 );
 
 	$(".scrolltop").click(function() {
@@ -60,11 +57,17 @@ $( document ).ready(function() {
 	});
 
 	$(function() {
+		var $c = $('.navbar-inverse').css("background-color");
+		var $d = $('.navbar-brand').css("color");
+		$("footer").css("background-color", $c);
+		$("footer a").css("color", $d);
+		$("footer p").css("color", $d);
 		$("body").prognroll({
 			height:10,        //Progress bar height
-			color:"#df691a", //Progress bar background color
+			color: $c, //Progress bar background color
 			custom:false     //If you make it true, you can add your custom div and see it's scroll progress on the page    
 		});
-	});	
+
+	});
 
 });

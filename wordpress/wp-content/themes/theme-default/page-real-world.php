@@ -57,7 +57,7 @@
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
-						<article class="post col-md-4 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
+						<article class="post <?php the_field('add_class'); ?> col-md-4 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
 
 							<div class="col-md-4 col-xs-12">
 

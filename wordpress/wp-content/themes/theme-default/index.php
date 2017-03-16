@@ -10,16 +10,16 @@
 	
 	<section class="row">
 		
-		<div class="col-md-8 col-xs-12">
+		<div class="trick col-md-8 col-xs-12">
 
 			<h1 class="center">Welcome friend!</h1>
-			<p>Here we will present several topics on development and design. It's about this ecosystem, art and technology.</br>
+			<p class="welcome">Here we will present several topics on development and design. It's about this ecosystem, art and technology.</br>
 			Will be presented distinguished topics , aiming at the growth of people who are building a new world.</br>
 			Our purpose is the expansion of knowledge, nothing more.</p>				
 
 		</div>
 
-		<div class="col-md-4 col-xs-12">
+		<div class="trick col-md-4 col-xs-12">
 		
 			<?php get_search_form(); ?>
 
@@ -37,27 +37,27 @@
 
 		<div class="history-posts col-md-12 col-xs-12">
 
-			<h2>Recent Topics</h2>
+			<h2 class="trick">Recent Topics</h2>
 			
 			<div class="isotope-grid">
 
 				<div class="grid">
 
-					<?php query_posts( 'posts_per_page=6&order=DESC' ); ?>
+					<?php query_posts( 'posts_per_page=10&order=DESC' ); ?>
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<article class="post col-md-6 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
+						<article class="post <?php the_field('add_class'); ?> col-md-6 col-xs-12 isotope-grid-item" <?php post_class( 'class-name' ); ?>>
 
 							<div class="col-md-4 col-xs-12">
 
 								<a href="<?php the_permalink();?>">
-									<?php the_post_thumbnail('thumbnail', array('class' => 'img-hover img-circle')); ?>
+									<?php the_post_thumbnail('full', array('class' => 'img-hover img-circle')); ?>
 								</a>
 
 							</div>
 
-							<div class="col-md-8 col-xs-12 auto">
+							<div class="col-md-8 col-xs-12">
 
 								<h3>
 									<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
@@ -101,7 +101,7 @@
 		
 		<div class="col-md-12 col-xs-12">
 
-			<h3 class="seemore"><a href="<?php echo get_home_url(); ?>/history">See more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></h3>
+			<h3 class="trick seemore"><a href="<?php echo get_home_url(); ?>/history">See more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></h3>
 		
 		</div>
 
@@ -113,7 +113,7 @@
 
 			<div class="col-md-4 col-xs-12">
 
-				<h2>Development - Last Topics</h2>
+				<h2 class="trick">Development - Last Topics</h2>
 
 				<?php query_posts( 'category_name=development&posts_per_page=5&order=DESC' ); ?>
 
@@ -121,7 +121,7 @@
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
-							<li>
+							<li class="post-trick">
 								<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title();?></a>
 							</li>
 						
@@ -137,7 +137,7 @@
 
 			<div class="col-md-4 col-xs-12">
 
-				<h2>Art - Last Topics</h2>
+				<h2 class="trick">Art - Last Topics</h2>
 
 				<?php query_posts( 'category_name=design&posts_per_page=5&order=DESC' ); ?>
 
@@ -145,7 +145,7 @@
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
-							<li>
+							<li class="post-trick">
 								<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title();?></a>
 							</li>
 						
@@ -161,7 +161,7 @@
 
 			<div class="col-md-4 col-xs-12">
 
-				<h2>Tutorials  - Last Topics</h2>
+				<h2 class="trick">Tutorials  - Last Topics</h2>
 
 				<?php query_posts( 'category_name=tutorials&posts_per_page=5&order=DESC' ); ?>
 
@@ -169,7 +169,7 @@
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
-							<li>
+							<li class="post-trick">
 								<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title();?></a>
 							</li>
 						

@@ -14,9 +14,7 @@
 
 	<meta name="author" content="Piulres">
 
-	<link rel="icon" href="../favicon.ico">
-
-	<title>Merlim CoreBook</title>
+	<title><?php echo get_bloginfo('name'); ?></title>
 
 	<!-- wp_head -->
 
@@ -27,20 +25,22 @@
 	<?php include 'le_scripts.php' ?>
 
 	<script type="text/javascript">
-		
+
 		function resizeText(multiplier) {
 		  if (document.body.style.fontSize == "") {
 		    document.body.style.fontSize = "1.0em";
 		  }
 		  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
-		}
 
+		}
+		
 	</script>
 
 </head>
 
 <body <?php body_class(); ?>>
 
+	<!-- <nav class="navbar navbar-default"> -->
 	<nav class="navbar navbar-inverse">
 
 		<div class="container-fluid">

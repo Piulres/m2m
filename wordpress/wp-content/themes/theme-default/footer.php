@@ -5,7 +5,7 @@
 
 			<?php wp_footer(); ?>
 
-			<p>Merlim CoreBook - All rights reserved</p>
+			<p><?php echo get_bloginfo( 'name' ); ?> - All rights reserved</p>
 			<a href="http://renan.zz.mu" target="_blank">by Piulres</a>
 
 		</footer>
