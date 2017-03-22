@@ -24,10 +24,11 @@
 
 	<?php include 'le_styles.php' ?>
 
-	<?php include 'le_scripts.php' ?>
+	<?php include 'le_scripts.php' ?>	
 
 	<script type="text/javascript">
 
+		// accessibility
 		function resizeText(multiplier) {
 		  if (document.body.style.fontSize == "") {
 		    document.body.style.fontSize = "1.0em";
@@ -79,7 +80,7 @@
 	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 	                'walker'            => new wp_bootstrap_navwalker())
 	            );
-	        ?>	        
+	        ?>        
 
 	        <!-- 
 	        <div class="plustext trick" onclick="resizeText(1)"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>
@@ -87,7 +88,7 @@
 			<div class="minustext trick" onclick="resizeText(-1)"><i class="fa fa-minus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>			
  			-->
 
-		</div><!-- /.container-fluid -->
+		</div>
 
 	</nav>
 

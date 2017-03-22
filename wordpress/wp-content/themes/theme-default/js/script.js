@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+
+	console.log("Merlim CoreBook - Knowledge Shire ~ https://github.com/Piulres/merlimcorebook");
+
 	$('.isotope-grid').isotope({
 	  itemSelector: '.isotope-grid-item',
 	  masonry: {
