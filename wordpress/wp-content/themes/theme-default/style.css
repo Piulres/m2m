@@ -38,6 +38,11 @@ nav.navbar.navbar-inverse, .topics h2, h2.title {
 	display: none!important;
 }
 
+#google-translator {
+    float: right;
+    margin-right: -4px;
+}
+
 .topics h2 {
 	text-align: center;
 	min-height: 90px;
@@ -68,6 +73,13 @@ nav.navbar.navbar-inverse, .topics h2, h2.title {
 #page-on-the-field .wp-post-image {
 	width: 150%;
 	min-height: 225px;
+}
+
+#accessibility {
+	position: absolute;
+	right: 110px;
+    top: 55px;
+	z-index: 999;
 }
 
 .container h2 {
@@ -124,8 +136,9 @@ footer p {
 }
 
 #searchform {
-	margin-top: 85px;
-	margin-bottom: 30px;
+    text-align: right;
+    margin-top: 55px;
+    margin-bottom: 20px;
 }
 
 #searchform input {
@@ -280,6 +293,7 @@ a.scrolltop {
 }
 
 .plustext {
+	/*
 	position: fixed;
 	top: 50%;
 	right: 40px;
@@ -287,16 +301,29 @@ a.scrolltop {
     height: 40px;
 	display: block;
 	z-index: 999;
+	*/
 }
 
 .minustext {
-	position: fixed;
+  	/*
+  	position: fixed;
 	top: 50%;
 	right: 70px;
     width: 15px;
     height: 40px;
 	display: block;
 	z-index: 999;
+	*/
+}
+
+.plustext,
+.minustext {
+	width: 15px;
+	height: 40px;
+	display: block;
+	float: right;
+	margin-right: 20px;
+	margin-top: 3px;
 }
 
 .auto {
@@ -329,5 +356,9 @@ a.scrolltop {
 	.wp-post-image {
 		height: 285px!important;
 		max-height: 195px;
+	}
+	#accessibility,
+	.accessibility {
+		display: none;
 	}
 }

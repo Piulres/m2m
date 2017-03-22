@@ -14,6 +14,8 @@
 
 	<meta name="author" content="Piulres">
 
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>favicon.png">
+
 	<title><?php echo get_bloginfo('name'); ?></title>
 
 	<!-- wp_head -->
@@ -39,6 +41,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<?php if ( is_home() ) { /* do */ } else { ?>
+
+		<div id="accessibility">
+
+			<?php include 'accessibility.php' ?>
+			
+		</div>
+
+	<?php } ?>
 
 	<!-- <nav class="navbar navbar-default"> -->
 	<nav class="navbar navbar-inverse">
@@ -67,11 +79,13 @@
 	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 	                'walker'            => new wp_bootstrap_navwalker())
 	            );
-	        ?>
+	        ?>	        
 
+	        <!-- 
 	        <div class="plustext trick" onclick="resizeText(1)"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>
 
 			<div class="minustext trick" onclick="resizeText(-1)"><i class="fa fa-minus" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></div>			
+ 			-->
 
 		</div><!-- /.container-fluid -->
 

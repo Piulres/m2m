@@ -23,6 +23,12 @@
 		
 			<?php get_search_form(); ?>
 
+			<div class="accessibility">
+				
+				<?php include 'accessibility.php' ?>
+			
+			</div>			
+			
 			<?php if ( is_active_sidebar( 'home' ) ) : ?>
 				
 				<?php dynamic_sidebar( 'home' ); ?>
