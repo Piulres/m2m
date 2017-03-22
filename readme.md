@@ -3,7 +3,7 @@ Knowledge Shire
 
 ----
 ### Version
-v3
+v.3
 
 ----
 ### Requirement
