@@ -14,7 +14,7 @@
 
 	<meta name="author" content="Piulres">
 
-	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>favicon.png">
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 
 	<title><?php echo get_bloginfo('name'); ?></title>
 
