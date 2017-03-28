@@ -24,6 +24,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
+@font-face {
+    font-family: OratorStd;
+    src: url("fonts/OratorStd.otf") format("opentype");
+}
+
+/** {
+	font-family: 'OratorStd';
+}*/
+
 html {
 	font-size: 12px;
 }
