@@ -73,4 +73,46 @@ $( document ).ready(function() {
 
 	});
 
+	var width = $(window).width();
+    if( width >= 959 ) {
+
+        $('.wp-post-image').each(function(){
+	        var theWidth = $(this).width();
+	        var theWidth = theWidth + 50;
+	        $(this).css("width", theWidth);
+	        $(this).css("height", theWidth);
+	    });
+
+    } else {
+
+    	$('.wp-post-image').each(function(){
+	        var theWidth = $(this).width();
+	        $(this).css("width", theWidth);
+	        $(this).css("height", theWidth);
+	    });
+
+    }
+	
+    // var width = $(window).width();
+    // if( width <= 959 ) {
+
+    //     $('.wp-post-image').each(function(){
+	   //      var theWidth = $(this).width();
+	   //      $(this).css("width", theWidth);
+	   //      $(this).css("height", theWidth);
+	   //      console.log('1');
+	   //  });
+
+    // } else {
+
+    // 	$('.wp-post-image').each(function(){
+	   //      var theWidth = $(this).width();
+	   //      var theWidth = theWidth + 50;
+	   //      $(this).css("width", theWidth);
+	   //      $(this).css("height", theWidth);
+	   //      console.log('2');
+	   //  });
+
+    // }
+
 });

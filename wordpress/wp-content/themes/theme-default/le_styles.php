@@ -4,9 +4,9 @@
 
 <link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 
-<!-- <link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap-theme-1.min.css' rel='stylesheet' type='text/css'> -->
+<link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap-theme-1.min.css' rel='stylesheet' type='text/css'>
 
-<link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap-theme-2.min.css' rel='stylesheet' type='text/css'>
+<!-- <link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap-theme-2.min.css' rel='stylesheet' type='text/css'> -->
 
 <!-- <link href='<?php echo get_bloginfo('template_directory');?>/css/bootstrap-theme-3.min.css' rel='stylesheet' type='text/css'> -->
 

@@ -57,33 +57,6 @@ nav.navbar.navbar-inverse, .topics h2, h2.title {
 	min-height: 90px;
 }
 
-.post {
-	min-height: 230px;
-}
-
-.post.col-md-4 .wp-post-image {
-	max-height: 150px;
-	min-height: 150px;
-	width: 175%;
-}
-
-.wp-post-image {
-	width: 135%;
-    opacity: 0.8;
-    height: 100%;
-	max-height: 195px;
-	min-height: 195px;
-    margin-bottom: 20px;
-}
-#home .wp-post-image,
-#page-tutorials .wp-post-image {
-	width: 130%;
-}
-
-#page-on-the-field .wp-post-image {
-	width: 150%;
-	min-height: 225px;
-}
 
 #accessibility {
 	position: absolute;
@@ -101,7 +74,8 @@ nav.navbar.navbar-inverse, .topics h2, h2.title {
 }
 
 .post {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
+	min-height: 250px;
 }
 
 .content {
@@ -159,6 +133,7 @@ h2.archive {
     width: 80%;
     padding-left: 10px;
     margin-left: 10px;
+    border: none;
 }
 
 .entry {
@@ -306,30 +281,6 @@ a.scrolltop {
     opacity: 1;
 }
 
-.plustext {
-	/*
-	position: fixed;
-	top: 50%;
-	right: 40px;
-    width: 15px;
-    height: 40px;
-	display: block;
-	z-index: 999;
-	*/
-}
-
-.minustext {
-  	/*
-  	position: fixed;
-	top: 50%;
-	right: 70px;
-    width: 15px;
-    height: 40px;
-	display: block;
-	z-index: 999;
-	*/
-}
-
 .plustext,
 .minustext {
 	width: 15px;
@@ -348,15 +299,13 @@ a.scrolltop {
   
 	img {
 		max-width: 100%;
-		height: auto !important;
+		height: auto;
 	}
 
 	#searchform {
 		margin-top: 20px;
 		margin-bottom: 20px;
-	}
-	.post {		
-		min-height: 635px;
+		text-align: center;
 	}
 
 	.plustext {
@@ -367,12 +316,33 @@ a.scrolltop {
 		top: 500px;
 	}
 
-	.wp-post-image {
-		height: 285px!important;
-		max-height: 285px;
-	}
 	#accessibility,
 	.accessibility {
 		display: none;
 	}
+
+	.post {
+		height: auto;
+		min-height: 750px;
+		overflow: auto;
+		clear: both;
+	}
+
+	.big .img-hover:hover,
+	.big .img-hover:active,
+	.big .img-hover:focus,
+	.img-hover:hover,
+	.img-hover:active,
+	.img-hover:focus {
+		animation: none;
+	    transform: none;
+	}
+	
+}
+
+.wp-post-image {
+	width: 100%;
+    opacity: 0.8;
+    height: auto;
+    margin-bottom: 20px;
 }
