@@ -48,11 +48,7 @@ $( document ).ready(function() {
 	  return value;
 	}
 
-	window.sr = ScrollReveal({ duration: 2000 });
-	// sr.reveal('nav', { opacity: 0 });
-	sr.reveal('.trick', { delay: 50, easing: 'ease-in-out' });
-	sr.reveal('.post-trick', 300 );
-	sr.reveal('.post', 1000 );
+	
 
 	$(".scrolltop").click(function() {
 	  $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -82,6 +78,12 @@ $( document ).ready(function() {
 	        $(this).css("width", theWidth);
 	        $(this).css("height", theWidth);
 	    });
+
+	    window.sr = ScrollReveal({ duration: 2000 });
+		// sr.reveal('nav', { opacity: 0 });
+		sr.reveal('.trick', { delay: 50, easing: 'ease-in-out' });
+		sr.reveal('.post-trick', 300 );
+		sr.reveal('.post', 1000 );
 
     } else {
 
