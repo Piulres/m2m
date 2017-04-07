@@ -77,7 +77,7 @@ nav.navbar.navbar-inverse, .topics h2, h2.title {
 }
 
 .navbar-brand {
-	font-size: 35px;
+	font-size: 2.7em;
 }
 
 #google-translator {
@@ -137,6 +137,7 @@ h2.archive {
 
 #searchform input {
     width: 80%;
+    height: 25px;
     padding-left: 10px;
     margin-left: 10px;
     border: none;
@@ -147,7 +148,13 @@ h2.archive {
     width: 100%;
     margin-bottom: 10px;
     display: block;
-    overflow: auto;
+    overflow: hidden;
+}
+
+.entry img {
+	width: 100%;
+	height: auto;
+	border: none!important;
 }
 
 .pagination {
@@ -194,17 +201,29 @@ a.scrolltop {
 .minustext {
 	width: 15px;
 	height: 40px;
+	cursor: pointer;
 	display: block;
 	float: right;
 	margin-right: 20px;
 	margin-top: 3px;
 }
 
-.wp-post-image {
-	width: 100%;
-    opacity: 0.8;
-    height: auto;
-    margin-bottom: 20px;
+.wp-post-image { 
+  width: 100%;
+  opacity: 0.8;
+  height: auto;
+  margin-bottom: 20px;
+  background-size:cover; 
+  background-position:center center;
+  transition:0.2s;
+}
+.wp-post-image:hover {
+  transform:scale(1.4);
+  opacity: 1;
+}
+
+article a i {
+
 }
 
 @keyframes pulse_animation {
@@ -336,5 +355,44 @@ a.scrolltop {
 	    position: relative;
 	    transform: none;
 	}
+	.navbar-brand {
+	    max-width: 100px;
+		line-height: 35px;
+    	height: 100px;
+	}
 	
+}
+
+.color1 {
+	background-blend-mode: difference;
+}
+
+.color2 {	
+	background-blend-mode: unset;
+}
+
+.color3 { 
+	background-blend-mode: color-burn;
+}
+
+.color4 { 	
+	background-blend-mode: color-darken;
+}
+
+.color5 {
+	background-blend-mode: lighten;
+}
+
+.color6 { 
+	background-blend-mode: color-dodge;
+}
+
+.color7 { 
+	background-blend-mode: soft-light;
+}
+
+.parapapa {
+	background-image: url('img/logo-opacity2.png');
+	/*background-image: url('img/logo-opacity.png');*/
+	background-size: 100px;
 }

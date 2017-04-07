@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<div id="home" class="container">
+<div id="home" class="container">	
 	
 	<section class="row">
 		
@@ -58,7 +58,8 @@
 							<div class="col-md-4 col-xs-12">
 
 								<a href="<?php the_permalink();?>">
-									<?php the_post_thumbnail('full', array('class' => 'img-hover img-circle')); ?>
+									<div class="wp-post-image img-circle" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+									</div>
 								</a>
 
 							</div>

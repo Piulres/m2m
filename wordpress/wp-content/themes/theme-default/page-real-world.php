@@ -62,7 +62,8 @@
 							<div class="col-md-4 col-xs-12">
 
 								<a href="<?php the_permalink();?>">
-									<?php the_post_thumbnail('thumbnail', array('class' => 'img-hover img-circle')); ?>
+									<div class="wp-post-image img-circle" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+									</div>
 								</a>
 
 							</div>

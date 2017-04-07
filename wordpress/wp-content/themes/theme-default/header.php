@@ -14,17 +14,19 @@
 
 	<meta name="author" content="Piulres">
 
+	<meta http-equiv="refresh" content="420; url=http://merlim.xyz/">
+
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 
 	<title><?php echo get_bloginfo('name'); ?></title>
 
 	<!-- wp_head -->
 
-	<?php wp_head(); ?>
-
 	<?php include 'le_styles.php' ?>
 
 	<?php include 'le_scripts.php' ?>	
+	
+	<?php wp_head(); ?>
 
 	<script type="text/javascript">
 
@@ -41,7 +43,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body class="parapapa"<?php body_class(); ?>>
 
 	<?php if ( is_home() ) { /* do */ } else { ?>
 
@@ -92,3 +94,4 @@
 
 	</nav>
 
+	<img id="logo" class="none" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />

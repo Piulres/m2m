@@ -169,7 +169,7 @@
     elements = _getRevealElements(target, container)
 
     if (!elements.length) {
-      console.log('ScrollReveal: reveal on "' + target + '" failed, no elements found.')
+      // console.log('ScrollReveal: reveal on "' + target + '" failed, no elements found.')
       return sr
     }
 

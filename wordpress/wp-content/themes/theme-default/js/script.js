@@ -2,6 +2,9 @@ $( document ).ready(function() {
 
 	console.log("Merlim CoreBook - Knowledge Shire ~ https://github.com/Piulres/merlimcorebook");
 
+
+	// Isotope
+
 	$('.isotope-grid').isotope({
 	  itemSelector: '.isotope-grid-item',
 	  masonry: {
@@ -48,12 +51,23 @@ $( document ).ready(function() {
 	  return value;
 	}
 
-	
+
+	// /////////////////////////////////////////////// //
+
+
+	// Arrow ScrollToTop
 
 	$(".scrolltop").click(function() {
 	  $("html, body").animate({ scrollTop: 0 }, "slow");
 	  return false;
 	});
+
+
+	// /////////////////////////////////////////////// //
+
+	
+
+	// Theme Color Ajust
 
 	$(function() {
 		var $c = $('.navbar-inverse').css("background-color");
@@ -69,8 +83,31 @@ $( document ).ready(function() {
 
 	});
 
+	
+	// /////////////////////////////////////////////// //
+
+	
 	var width = $(window).width();
     if( width >= 959 ) {
+
+    	// Change BG Blend
+
+    	function changeColor(curNumber){
+	    curNumber++;
+
+		    if(curNumber > 7){
+		        curNumber = 1;
+		    }
+
+		    // document.body.setAttribute('class', 'color' + curNumber);
+		    $('body').toggleClass('color' + curNumber);
+		    setTimeout(function(){changeColor(curNumber)}, 5000);
+
+		}
+
+		changeColor(0);
+
+		// Post Img Align
 
         $('.wp-post-image').each(function(){
 	        var theWidth = $(this).width();
@@ -78,6 +115,8 @@ $( document ).ready(function() {
 	        $(this).css("width", theWidth);
 	        $(this).css("height", theWidth);
 	    });
+
+	    // Animation onReveal
 
 	    window.sr = ScrollReveal({ duration: 2000 });
 		// sr.reveal('nav', { opacity: 0 });
@@ -95,26 +134,7 @@ $( document ).ready(function() {
 
     }
 	
-    // var width = $(window).width();
-    // if( width <= 959 ) {
-
-    //     $('.wp-post-image').each(function(){
-	   //      var theWidth = $(this).width();
-	   //      $(this).css("width", theWidth);
-	   //      $(this).css("height", theWidth);
-	   //      console.log('1');
-	   //  });
-
-    // } else {
-
-    // 	$('.wp-post-image').each(function(){
-	   //      var theWidth = $(this).width();
-	   //      var theWidth = theWidth + 50;
-	   //      $(this).css("width", theWidth);
-	   //      $(this).css("height", theWidth);
-	   //      console.log('2');
-	   //  });
-
-    // }
+	// /////////////////////////////////////////////// //
+    
 
 });
