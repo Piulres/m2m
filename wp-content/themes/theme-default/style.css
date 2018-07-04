@@ -1,0 +1,229 @@
+/*
+
+Theme Name: Theme Default
+
+Theme URI: https://github.com/Piulres/tonca
+
+Description: Tonca is a wordpress system using many technologies and ready to development.
+
+Author: Piulres
+
+Author URI: http://renzn.zz.mu
+
+Text Domain: Theme Default
+
+Version: 1.0
+
+License: GNU General Public License v2 or later
+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+
+Use it to make something cool, have fun, and share what you've learned with others.
+
+
+*/
+
+@font-face {
+    font-family: "Avenir-Black";
+    src: url("fonts/Avenir/Avenir-Black.ttf");
+}
+
+@font-face {
+    font-family: "Avenir-Book";
+    src: url("fonts/Avenir/Avenir-Book.ttf");
+}
+
+@font-face {
+    font-family: "Avenir-Heavy";
+    src: url("fonts/Avenir/Avenir-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "Avenir-Light";
+    src: url("fonts/Avenir/Avenir-Light.ttf");
+}
+
+@font-face {
+    font-family: "Avenir-Medium";
+    src: url("fonts/Avenir/Avenir-Medium.ttf");
+}
+
+* {
+	font-family: 'Avenir-Book', sans-serif;
+}
+
+
+#logo {
+	height: 50px;
+}
+
+footer {
+    height: 70px;
+    position: relative;
+    background-color: #2e2a2a;
+    color: white;
+    font-size: 14px;
+}
+
+footer #logo {
+    height: 50px;
+    margin-top: 15px;
+    float: left;
+}
+
+footer p {
+    float: left;
+    margin: 30px 20px;
+}
+
+@media (min-width: 1200px) {
+	.container {
+	    width: 1000px;
+	}
+}
+
+nav {
+	height: 90px;
+}
+
+nav .container div {
+    float: left;
+    margin-top: 20px;
+}
+
+nav .container div:last-child {
+	float: right;
+	margin-top: 26px;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+#menu_top {
+	margin-left: 50px;
+}
+
+#menu_top ul li {
+    min-width: 120px;
+    text-align: center;
+}
+
+/* verde escuro = #15443c */
+/* verde claro = #bada55 */
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: #15443c;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    background-color: #bada55;
+    font-size: 16px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #15443c;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.ms-nav-next {
+    right: -100px!important;
+}
+
+.ms-nav-prev {
+    left: -100px!important;
+}
+
+#banner {
+	height: 450px;
+}
+
+.parallax-window {
+	min-height: 600px;
+	background: transparent;
+}
+
+.box {
+    margin-top: 120px;
+    background-color: white;
+    padding: 30px;
+}
+
+h2 {
+    color: #15443c;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: 'Avenir-Book', sans-serif;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.box p {
+	color: #15443c;
+	font-size: 16px;
+	font-family: 'Avenir-Book', sans-serif;
+	line-height: 17px;
+}
+
+.center {
+	text-align: center;
+}
+
+.item h3 {
+	text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.item p {
+	text-align: center;
+	color: #fff;
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+}
+
+.item img:hover {
+  /*-webkit-filter: grayscale(100%);*/
+  /*opacity: 0.5;*/
+}
+
+.item div {
+    background: url(img/servicos.jpg);
+    margin-bottom: 50px;
+    padding: 20px;
+    min-height: 550px;
+    background-position: center;
+}
+
+section#servicos {
+    margin: 50px 0;
+    background-color: white;
+}
+
+section#contato h2 {
+    color: #fff;
+    margin: 30px 0;
+    text-align: center;
+}
+section#contato p {
+    color: #fff;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.rede-social {
+		display: none;
+	}
+}
